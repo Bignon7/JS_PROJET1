@@ -75,10 +75,14 @@ body {
     text-align: center;
     padding: 5px;
     border-radius: 5px;
+    line-height: 40px; /* Centre verticalement */
+    font-size: 1.2em;
 }
 
-
-
+.write1::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
 
 
 .wrapper input {
