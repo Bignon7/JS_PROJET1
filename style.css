@@ -1,95 +1,104 @@
-*{
-    /* background-color: lightskyblue; */
-    margin: 8px;
-    /* justify-self: center; */
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
 }
 
 body {
     background: black;
+    display: flex;
     justify-content: center;
-    
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
 }
 
 .container {
-    height: 80vh;
-    margin: auto;
-    margin-top: 12vh;
-    padding-top: 5vh;
-    border-radius: 30px;
-    width: 25%;
-    background: thistle;
-}
-
-
-
-.wrapper div{
     display: flex;
-    flex-direction: row;
-    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px; /* Empêche l'élargissement excessif */
+    background: thistle;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.wrapper input  {
-    padding: 5px;
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wrapper div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.write {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: right;
+    border: none;
+    background: whitesmoke;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: default;
+}
+
+.wrapper input {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: center;
     color: white;
     background-color: black;
-    border-radius: 5px;
-    height:40px;
-    width:40px;
+    border-radius: 8px;
+    border: none;
     cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.wrapper input:hover {
+    background-color: #333;
 }
 
 .wrapper .equal {
-    width: 96px;
-    cursor: pointer;
-}
-.wrapper .operator {
-    color:violet;
-    font-weight: bold;
-    cursor: pointer;
-}
-.wrapper .write {
-    border: none;
-    background: whitesmoke;
-    width:max-content;
+    flex: 2; /* Rendre le bouton "=" plus large */
+    background-color: violet;
     color: black;
     font-weight: bold;
-    cursor: default;
-}
-.write2 {
-    font-size: 0.95em;
-    text-align: right;
-}
-h2 {
-    padding: auto 10px;
-    text-align: left;
 }
 
-@media screen and (max-width:1000px){
+.wrapper .operator {
+    color: violet;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 550px) {
     .container {
-    width: 35%;
+        max-width: 90%;
+        padding: 15px;
     }
-}
-
-@media screen and (max-width:770px){
-    .container {
-    width: 50%;
+    
+    .write {
+        font-size: 1.2em;
+        padding: 8px;
     }
-}
 
-@media screen and (max-width:550px){
+    .wrapper input {
+        padding: 10px;
+        font-size: 1em;
+    }
+
     .write1 {
-        display: none;
+        display: none; /* Masquer l'affichage de l'heure sur mobile */
     }
-    .write2 {
-        font-size: 0.95em;
-        text-align: right;
-    }
-    .container {
-        width: 70%;
-        }
 }
