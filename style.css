@@ -14,12 +14,13 @@ body {
     padding: 10px;
 }
 
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 350px; /* Empêche l'élargissement excessif */
+    max-width: 350px; 
     background: thistle;
     border-radius: 15px;
     padding: 20px;
@@ -52,6 +53,33 @@ body {
     cursor: default;
 }
 
+
+
+.wrapper div:first-child {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    gap: 10px; 
+}
+
+.wrapper h2 {
+    margin: 0;
+    font-size: 1.5em;
+    flex-shrink: 0; 
+}
+
+.write1 {
+    height: 40px; 
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+
 .wrapper input {
     flex: 1;
     padding: 15px;
@@ -71,8 +99,7 @@ body {
 }
 
 .wrapper .equal {
-    flex: 2; /* Rendre le bouton "=" plus large */
-    background-color: violet;
+    flex: 2; 
     color: black;
     font-weight: bold;
 }
@@ -99,6 +126,6 @@ body {
     }
 
     .write1 {
-        display: none; /* Masquer l'affichage de l'heure sur mobile */
+        display: none;
     }
 }
